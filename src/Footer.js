@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="footer-content">
       <div className='footer-text'>
       <h2>FJ</h2>
-      <p>Made with React - Source code <a className='underline' href='https://github.com/skyy6?tab=repositories' target='_blank'>here</a></p>
+      <p>Made with React - Source code <a className='underline' href='https://github.com/skyy6/react_cv' target='_blank'>here</a></p>
       </div>     
     </div>
   </footer>
