@@ -1,0 +1,66 @@
+.timeline-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 800px;
+}
+
+.timeline-circle-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+.timeline-text-container{
+    display:flex;
+    flex-direction: column;
+    font-family: 'Ubuntu';
+}
+
+
+.timeline{
+    background-color: black;
+    color:#000000;
+    width: 3px;
+    min-height: 1250px;
+    align-self: center;
+    margin-top: 50px;
+}
+.timeline-circle{
+    width: 70px;
+    height: 70px;
+    color:black;
+    border: solid 2px;
+    background-color: rgb(255, 255, 255);
+    border-color: black;
+    margin-top: 20px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline-circlee::after{
+    content:"RRRRRRRRRRRRRRRRRRRRRRRRRRRRRR";
+    font-family: 'Ubuntu';
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    color:black;
+    background-color: rgb(81, 138, 172);
+    border-color: black;
+    margin-top: 10px;
+    position: relative;
+    top: 8px;
+    left: 85px;
+}
+.univeristy-image{
+    width: 45px;
+    height: 45px;
+}
+.vertical-timeline::before {
+    /* this is the vertical line */
+  
+    background: black !important;
+  }
+

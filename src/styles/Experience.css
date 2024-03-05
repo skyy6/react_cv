@@ -1,0 +1,126 @@
+
+.experience{
+    display: flex;
+    flex-direction: column;
+}
+.experience-title{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu';
+    align-items: center;
+}
+
+.experience-title-school{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu';
+    align-items: center;
+    margin-top: 50px;
+}
+.experience-title-school h1{
+    border-bottom: 3px solid rgb(173, 175, 175);
+}
+
+.experience-title h1{
+    border-bottom: 3px solid rgb(173, 175, 175);
+}
+
+.experience-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    font-family: 'Ubuntu';
+    width: 700px;
+    margin-top: 10px;
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 1%;
+    box-shadow: 1px 3px 5px 3px rgb(172, 172, 172);
+    max-width: 100%;
+    overflow: auto;
+    }
+
+
+.experience-text-container{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px dotted rgb(160, 160, 160);
+}
+.experience-text-bottom-container{
+    display: flex;
+    flex-direction: column;
+}
+.experience-text-container h2, .experience-text-bottom-container h2{
+    font-size: 19px;
+    margin-bottom: 0px;
+    margin-left: 4px;
+}
+.experience-text-container h3, .experience-text-bottom-container h3{
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-top: 8px;
+    margin-left: 4px;
+    font-weight: normal;
+}
+
+.experience-company{
+    display: flex;
+    color:#6d97aa;
+}
+.experience-company p{
+    margin-top: 8px;
+}
+
+.experience-text-description{
+    font-family: 'Ubuntu';
+    color: grey;
+    margin-left: 4px;
+    margin-right: 2px;
+    font-size: 15px;
+}
+
+.exp-stack-container{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu';
+    justify-content: center;
+    align-items: center;
+       }
+
+.exp-stack-text{
+        text-align: center;
+        border-style: solid;
+        border-color: grey;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-width: 2px;
+        width: 240px;
+       }
+.divider {
+        width: 100%;
+        margin-top: 2px;
+        color: #6d97aa;
+    }
+
+    .smallmargin{
+        margin-bottom: 6px;
+    }
+
+.underline {
+        text-decoration: underline;
+        cursor: pointer;
+        color: #424242;
+      }
+.underline:visited{
+        color: #424242;
+      }
+
+       @media only screen and (max-width: 710px) {
+        .experience-container {
+            width: 100%;
+        }
+    }
+
+
