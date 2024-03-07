@@ -14,12 +14,29 @@ const Navbar = ({ onNavbarClick }) => {
     setActiveState(state);
   }
 
+
   const scrollToBottom = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
       behavior: 'smooth', 
     });
   };
+
+  const handleClick = (site) =>{
+
+    if(site === 'contact'){
+      if(activeState === 'home'){
+        scrollToBottom()
+      } else{
+        setTimeout(scrollToBottom, 1000); navbarState('home');
+      }
+      handleNavItemClick('home');
+    }
+    else{
+    handleNavItemClick(site);
+    navbarState(site);
+    }
+  }
 
   return (
     
@@ -28,13 +45,13 @@ const Navbar = ({ onNavbarClick }) => {
       <h2>FJ</h2>
       </div>
       <div className='navbar-items'>
-        <a onClick={() => {handleNavItemClick('home'); navbarState('home');}}>
+        <a onClick={() => {handleClick("home")}}>
         <h2>Home</h2>
         </a>
-        <a onClick={() => {handleNavItemClick('home'); if(activeState === 'home'){scrollToBottom()} else{setTimeout(scrollToBottom, 1000); navbarState('home');};}}>
+        <a onClick={() => {handleClick("contact");}}>
         <h2>Contact</h2>
         </a>
-        <a onClick={() => {handleNavItemClick('experience'); navbarState('experience');}}>
+        <a onClick={() => {handleClick("experience")}}>
         <h2>Experience</h2>
         </a>
       </div>     
