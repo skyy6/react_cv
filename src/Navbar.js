@@ -54,6 +54,9 @@ const Navbar = ({ onNavbarClick }) => {
         <a onClick={() => {handleClick("experience")}}>
         <h2>Experience</h2>
         </a>
+        <a onClick={() => {handleClick("r3f")}}>
+        <h2>Walk around</h2>
+        </a>
       </div>     
     </nav>
     
