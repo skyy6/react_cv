@@ -1,14 +1,15 @@
 .app-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-.content-wrap{
-    flex:1;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  /* min-width: 55vh; */
 }
 
-.inner-container{
+.content-wrap {
+  flex: 1;
+}
+
+.inner-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,24 +36,22 @@
     opacity: 0;
   }
   to {
-    opacity: 1; 
+    opacity: 1;
   }
 }
 
-
 .fade-in-long {
-  opacity: 0; 
-  animation: fadeInLong 1.5s ease-in-out forwards; 
+  opacity: 0;
+  animation: fadeInLong 1.5s ease-in-out forwards;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 15px;
-  
 }
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   color: white;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: rgb(170, 170, 170);
   border-radius: 10px;
 }

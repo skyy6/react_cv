@@ -1,54 +1,49 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 const useKeyboardControls = (pointerLocked) => {
+  const keys = {
+    KeyW: "forward",
+    KeyS: "backward",
+    KeyA: "left",
+    KeyD: "right",
+  };
 
-    const keys =  {
-        KeyW: "forward",
-        KeyS: "backward",
-        KeyA: "left",
-        KeyD: "right"
-    }
+  const moveByKey = (key) => keys[key];
 
-    const moveByKey = (key) => keys[key];
+  const [movement, setMovement] = useState({
+    forward: false,
+    backward: false,
+    left: false,
+    right: false,
+  });
 
-    const [movement, setMovement] = useState({
-        forward: false,
-        backward: false,
-        left: false,
-        right: false
-    });
+  const setMovementStatus = (code, status) => {
+    setMovement((m) => ({ ...m, [code]: status }));
+  };
 
-    const setMovementStatus = (code, status) => {
-        setMovement((m) => ({...m, [code]: status}))
-    }
-
-    useEffect(() => {
-
-      const handleKeyDown = (ev) =>{
-        if(pointerLocked){
+  useEffect(() => {
+    const handleKeyDown = (ev) => {
+      if (pointerLocked) {
         setMovementStatus(moveByKey(ev.code), true);
       }
-      };
+    };
 
-      const handleKeyUp = (ev) => {
-        if(pointerLocked){
+    const handleKeyUp = (ev) => {
+      if (pointerLocked) {
         setMovementStatus(moveByKey(ev.code), false);
-        }
-      };
-
-      document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('keyup', handleKeyUp);
-    
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('keyup', handleKeyUp);
       }
-    },);
-    
-    
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("keyup", handleKeyUp);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener("keyup", handleKeyUp);
+    };
+  });
 
   return movement;
+};
 
-}
-
-export default useKeyboardControls
+export default useKeyboardControls;

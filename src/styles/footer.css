@@ -1,39 +1,37 @@
 .footer {
-    background-color:rgb(175, 175, 175);
-    padding: 0px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    border-top: 2px solid #868788ab;
-  }
-  
-  .footer-content {
-    margin: auto;
-  }
+  /* background-color: rgb(240, 240, 240); */
+  /* padding: 0px; */
+  text-align: center;
+  /* position: relative;
+  bottom: 0; */
+  width: 100%;
+  /* border-top: 3px solid #868788ab; */
+  border-width: 2px;
+  border-style: solid;
+  border-left: 0px;
+  border-right: 0px;
+  /*opacity: 0; 
+  animation: fadeIn 1s linear infinite;*/
+  border-image: linear-gradient(to left, #868788ab, #ffffff) 30;
+}
 
-  .footer-text{
-    text-shadow: 0 3px 6px #272727;
-  }
+.footer-text h2 {
+  font-family: "Rounded";
+  font-size: 30px;
+  margin-top: 5px;
+}
 
-  .footer-text h2{
-    font-family: 'Rounded';
-    font-size: 30px;
-    margin-top: 5px;
-  }
+.footer-text p {
+  font-family: "Ubuntu";
+  text-shadow: none;
+  font-size: 14px;
+  color: #424242;
+}
 
-  .footer-text p{
-    font-family: 'Ubuntu';
-    text-shadow: none;
-    font-size: 14px;
-    color: #424242;
-  }
-
-  .underline {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  .underline:visited{
-    color: #424242;
-  }
-  
+.underline {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.underline:visited {
+  color: #424242;
+}
