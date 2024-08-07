@@ -1,0 +1,57 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  /* min-width: 55vh; */
+}
+
+.content-wrap {
+  flex: 1;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 800px;
+  width: 60%;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeInLong {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-long {
+  opacity: 0;
+  animation: fadeInLong 1.5s ease-in-out forwards;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(170, 170, 170);
+  border-radius: 10px;
+}

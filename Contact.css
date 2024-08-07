@@ -1,0 +1,89 @@
+.contact-container {
+  padding-top: 40px;
+  text-align: center;
+  width: 80%;
+  justify-content: center;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+  min-width: 0;
+  margin-top: 150px;
+}
+
+.contact-title {
+  font-family: "Ubuntu";
+}
+
+.contact-title h2 {
+  margin-bottom: 4px;
+}
+
+.contact-textcontainer {
+  display: flex;
+  flex-direction: column;
+  font-family: "Ubuntu";
+  color: grey;
+  align-items: center;
+  justify-content: space-between;
+  height: 140px;
+}
+
+.contact-location {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+}
+.contact-location-text {
+  font-family: "Ubuntu";
+}
+.contact-mail {
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+}
+.contact-mail-text-container {
+  font-family: "Ubuntu";
+  color: grey;
+}
+.contact-pin {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 4px;
+}
+
+.contact-mailpic {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+.contact-mail-text {
+  color: grey;
+  text-decoration: none;
+}
+.contact-mail-text:visited {
+  color: grey;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-textcontainer {
+    flex-direction: column;
+  }
+}
