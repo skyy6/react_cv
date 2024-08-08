@@ -15,8 +15,6 @@ const Navbar = ({ onNavbarClick }) => {
     setActiveState(state);
   };
 
-  const isMobile = navigator.userAgentData.mobile;
-
   /*   useEffect(() => {
     if (typeof (navigator.userAgentData === "undefined")) {
       setIsMobile(fa);
@@ -88,7 +86,7 @@ const Navbar = ({ onNavbarClick }) => {
             handleClick("r3f");
           }}
         >
-          {!isMobile && <h2>Explore</h2>}
+          <h2>Explore</h2>
         </a>
       </div>
     </nav>
