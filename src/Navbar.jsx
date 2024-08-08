@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./styles/Navbar.css";
+import { isMobile } from "react-device-detect";
 
 const Navbar = ({ onNavbarClick }) => {
   const handleNavItemClick = (content) => {
@@ -51,6 +52,7 @@ const Navbar = ({ onNavbarClick }) => {
       clearTimeout(timeout);
       handleNavItemClick(site);
       navbarState(site);
+      console.log(isMobile);
     }
   };
 
@@ -86,7 +88,7 @@ const Navbar = ({ onNavbarClick }) => {
             handleClick("r3f");
           }}
         >
-          <h2>Explore</h2>
+          {!isMobile && <h2>Explore</h2>}
         </a>
       </div>
     </nav>
