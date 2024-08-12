@@ -1,36 +1,16 @@
 @font-face {
-    font-family: 'Bebas';
-src: url('../fonts/BebasNeue-Regular.woff2') format('woff2'),
-     url('../fonts/BebasNeue-Regular.woff') format('woff'),
-     url('../fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-family: "Rounded";
+  src: url("../fonts/Rounded_Elegance.ttf") format("truetype");
+  font-display: swap;
+}
 
-  }
-
-  @font-face {
-    font-family: 'Blacklist';
-src: url('../fonts/Blacklisted.ttf') format('truetype');
-
-  }
-  
-  @font-face {
-    font-family: 'ModernSans';
-src: url('../fonts/ModernSans-Light.otf') format('truetype');
-
-  }
-  @font-face {
-    font-family: 'Rounded';
-src: url('../fonts/Rounded_Elegance.ttf') format('truetype');
-
-  }
-
-  @font-face {
-    font-family: 'Ubuntu';
-src: url('../fonts/Ubuntu-Medium.ttf') format('truetype'),
-      url('../fonts/Ubuntu-BoldItalic.ttf') format('truetype'),
-      url('../fonts/Ubuntu-Italic.ttf') format('truetype'),
-      url('../fonts/Ubuntu-Light.ttf') format('truetype'),
-      url('../fonts/Ubuntu-Medium.ttf') format('truetype')
-      url('../fonts/Ubuntu-Regular.ttf') format('truetype')
-
-  }
-  
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Medium.ttf") format("truetype"),
+    url("../fonts/Ubuntu-BoldItalic.ttf") format("truetype"),
+    url("../fonts/Ubuntu-Italic.ttf") format("truetype"),
+    url("../fonts/Ubuntu-Light.ttf") format("truetype"),
+    url("../fonts/Ubuntu-Medium.ttf") format("truetype"),
+    url("../fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-display: swap;
+}
