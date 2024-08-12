@@ -93,56 +93,58 @@ const Stage = ({ onButtonClick }) => {
 
   return (
     <div className="full-screen">
-      <div className="ui-element"></div>
-      <div className={opacity ? "black-screen" : ""}></div>
-      <div
-        className="pause-screen"
-        style={{
-          display: pauseScreen ? "none" : "block",
-          backgroundColor: "rgba(0, 0, 0, 0.75)",
-        }}
-      >
-        <div className={showIntro ? "center-ui" : "center-ui-startbutton-only"}>
-          <div
-            className="intro-box"
-            style={{ display: showIntro ? "block" : "none" }}
-          >
-            <p>
-              This was initally just me playing around with the possibilites of
-              R3F.
-            </p>
-            <p>
-              I then decided to implement this very simple demo on my personal
-              website :){" "}
-            </p>
-            {/* LÄGG TILL "DO NOT SHOW AGAIN BOX" och "OK"? Kanske inte OK... */}
-          </div>
-          <button
-            className="start-button"
-            id="lock-btn"
-            onClick={buttonClick}
-            style={{ display: pointerLock ? "none" : "block" }}
-          >
-            {buttonText}
-          </button>
-        </div>
-      </div>
-      <div
-        className="instruction"
-        style={{ display: opacity ? "none" : "block" }}
-      >
-        <p>- Use WASD to move</p>
-        <p>- Press E on the laptop to return</p>
-      </div>
-      <div className="canvas">
-        <Canvas
-          shadows
-          camera={{ fov: 85 }}
-          onCreated={({ camera }) => {
-            camera.rotation.set(0, 4.7, 0);
+      <Suspense>
+        <div className="ui-element"></div>
+        <div className={opacity ? "black-screen" : ""}></div>
+        <div
+          className="pause-screen"
+          style={{
+            display: pauseScreen ? "none" : "block",
+            backgroundColor: "rgba(0, 0, 0, 0.75)",
           }}
         >
-          <Suspense>
+          <div
+            className={showIntro ? "center-ui" : "center-ui-startbutton-only"}
+          >
+            <div
+              className="intro-box"
+              style={{ display: showIntro ? "block" : "none" }}
+            >
+              <p>
+                This was initally just me playing around with the possibilites
+                of R3F.
+              </p>
+              <p>
+                I then decided to implement this very simple demo on my personal
+                website :){" "}
+              </p>
+              {/* LÄGG TILL "DO NOT SHOW AGAIN BOX" och "OK"? Kanske inte OK... */}
+            </div>
+            <button
+              className="start-button"
+              id="lock-btn"
+              onClick={buttonClick}
+              style={{ display: pointerLock ? "none" : "block" }}
+            >
+              {buttonText}
+            </button>
+          </div>
+        </div>
+        <div
+          className="instruction"
+          style={{ display: opacity ? "none" : "block" }}
+        >
+          <p>- Use WASD to move</p>
+          <p>- Press E on the laptop to return</p>
+        </div>
+        <div className="canvas">
+          <Canvas
+            shadows
+            camera={{ fov: 85 }}
+            onCreated={({ camera }) => {
+              camera.rotation.set(0, 4.7, 0);
+            }}
+          >
             <Physics>
               <PointerLockControls selector="#lock-btn" />
               <ambientLight intensity={0.9} />
@@ -227,9 +229,9 @@ const Stage = ({ onButtonClick }) => {
               </RigidBody>
               <Character pointerLocked={movement} />
             </Physics>
-          </Suspense>
-        </Canvas>
-      </div>
+          </Canvas>
+        </div>
+      </Suspense>
     </div>
   );
 };
