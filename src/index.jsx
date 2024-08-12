@@ -1,13 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import '../src/styles/main.css';
-import '../src/styles/fonts.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { Analytics } from "@vercel/analytics/react";
+import "../src/styles/main.css";
+import "../src/styles/fonts.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-      <App />
+    <Analytics />
+    <App />
   </React.StrictMode>
 );
 
