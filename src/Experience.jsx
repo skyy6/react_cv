@@ -35,11 +35,9 @@ const Experience = () => {
           <h3>2021-current</h3>
           <div className="experience-text-description">
             <p>
-              In my role as a developer at Tietoevry, I am responsible for
-              developing and managing customer-specific functionality for the
-              Public360 system, utilizing C# integrations and tools within
-              MSSQL. The role involves a lot of customer contact, a large
-              majority of the customer base comes from the public sector.
+              As a developer at Tietoevry, I am responsible for creating and
+              managing customer-specific functionality in the Public360 system,
+              using C# for integrations and MSSQL for database management.
             </p>
           </div>
         </div>
