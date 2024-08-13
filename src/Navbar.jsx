@@ -1,30 +1,9 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import "./styles/Navbar.css";
 import { isMobile } from "react-device-detect";
+import { Link } from "react-router-dom";
 
-const Navbar = ({ onNavbarClick }) => {
-  const handleNavItemClick = (content) => {
-    onNavbarClick(content);
-  };
-
-  const [activeState, setActiveState] = useState("home");
-
-  //const [isMobile, setIsMobile] = useState(false);  /* Testing purposes only */
-
-  const navbarState = (state) => {
-    setActiveState(state);
-  };
-
-  /*   useEffect(() => {
-    if (typeof (navigator.userAgentData === "undefined")) {
-      setIsMobile(fa);
-    }
-    console.log(isMobile);
-
-    return () => {};
-  }, []); */
-
+const Navbar = () => {
   const scrollToBottom = () => {
     window.scrollTo({
       top: document.body.scrollHeight,
@@ -36,23 +15,7 @@ const Navbar = ({ onNavbarClick }) => {
   const handleClick = (site) => {
     clearTimeout(timeout);
     if (site === "contact") {
-      if (activeState === "home") {
-        scrollToBottom();
-      } else {
-        timeout = setTimeout(() => {
-          scrollToBottom();
-          navbarState("home");
-        }, 200);
-      }
-      handleNavItemClick("home");
-    } else {
-      if (site === "experience") {
-        clearTimeout(timeout);
-      }
-      clearTimeout(timeout);
-      handleNavItemClick(site);
-      navbarState(site);
-      console.log(isMobile);
+      scrollToBottom();
     }
   };
 
@@ -62,34 +25,26 @@ const Navbar = ({ onNavbarClick }) => {
         <h2>FJ</h2>
       </div>
       <div className="navbar-items">
-        <a
-          onClick={() => {
-            handleClick("home");
-          }}
-        >
+        <Link to="/">
           <h2>Home</h2>
-        </a>
-        <a
-          onClick={() => {
-            handleClick("contact");
-          }}
-        >
-          <h2>Contact</h2>
-        </a>
-        <a
-          onClick={() => {
-            handleClick("experience");
-          }}
-        >
+        </Link>
+        <Link to="/">
+          <h2
+            onClick={() => {
+              handleClick("contact");
+            }}
+          >
+            Contact
+          </h2>
+        </Link>
+        <Link to="/experience">
           <h2>Experience</h2>
-        </a>
-        <a
-          onClick={() => {
-            handleClick("r3f");
-          }}
-        >
-          {!isMobile && <h2>Explore</h2>}
-        </a>
+        </Link>
+        {!isMobile && (
+          <Link to="/r3f">
+            <h2>Explore</h2>
+          </Link>
+        )}
       </div>
     </nav>
   );

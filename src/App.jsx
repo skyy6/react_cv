@@ -7,43 +7,52 @@ import AboutMe from "./AboutMe";
 import Stage from "./Stage";
 import "./styles/App.css";
 import Experience from "./Experience";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  useLocation,
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 function App() {
   const [activeContent, setActiveContent] = useState("home");
 
-  const handleNavbarClick = (content) => {
-    setActiveContent(content);
+  const LocationWrapper = () => {
+    const location = useLocation();
+    setActiveContent(location.pathname);
+    console.log(activeContent);
   };
 
   return (
-    <div className={activeContent !== "r3f" ? "app-container" : ""}>
-      <Router>
-        <Navbar onNavbarClick={handleNavbarClick} />
+    <Router>
+      <LocationWrapper />
+      <div className={activeContent !== "r3f" ? "app-container" : ""}>
+        <Navbar />
         <Routes>
-          <Route path="experience" element={<Experience />}></Route>
+          <Route
+            path="/"
+            element={
+              <div className="inner-container">
+                <div className="fade-in-long">
+                  <Description />
+                  <AboutMe />
+                </div>
+                <Contact />
+              </div>
+            }
+          ></Route>
+          <Route
+            path="/experience"
+            element={
+              <div className="inner-container">
+                <Experience />
+              </div>
+            }
+          />
+          <Route path="/r3f" element={<Stage />} />
         </Routes>
-        <div className={activeContent !== "r3f" ? "inner-container" : ""}>
-          {activeContent === "home" && (
-            <div className="fade-in-long">
-              <Description />
-              <AboutMe />
-            </div>
-          )}
-          {activeContent === "experience" && (
-            <div className="fade-in-long">
-              <Experience />
-            </div>
-          )}
-          {activeContent === "home" && <Contact />}
-        </div>
-        {activeContent === "r3f" && (
-          <div className="fade-in-long">
-            <Stage onButtonClick={handleNavbarClick} />
-          </div>
-        )}
-      </Router>
-      <Footer visible={activeContent !== "r3f"} />
-    </div>
+        <Footer visible={activeContent !== "/r3f"} />
+      </div>
+    </Router>
   );
 }
 

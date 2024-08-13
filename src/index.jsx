@@ -4,6 +4,7 @@ import App from "./App";
 import { Analytics } from "@vercel/analytics/react";
 import "../src/styles/main.css";
 import "../src/styles/fonts.css";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
