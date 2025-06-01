@@ -52,14 +52,6 @@ const Contact = () => {
                 <div className="contact-mail-text-container"></div>
               )}
             </div>
-            <div className="contact-location">
-              <img src={pin} alt="contactpin" className="contact-pin"></img>
-              <div className="contact-location-text">
-                {data && data.current && data.current.temperature_2m && (
-                  <p>Haninge, Stockholm ({data.current.temperature_2m}°)</p>
-                )}
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
